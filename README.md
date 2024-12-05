@@ -1,1 +1,1 @@
-# Default light syntax theme for Inkdrop Markdown Editor
+# Vesper syntax theme for Inkdrop Markdown Editor
