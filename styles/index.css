@@ -1,37 +1,33 @@
 .editor {
-    /* Polar Night */
-    --base00: hsl(220 20% 22%);
-    --base01: hsl(222 16% 28%);
-    --base02: hsl(220 17% 32%);
-    --base03: hsl(220 16% 40%);
-
-    /* Snow Storm */
-    --base04: hsl(219 28% 88%);
-    --base05: hsl(218 27% 92%);
-    --base06: hsl(218 27% 94%);
-
-    /* Frost */
-    --base07: hsl(179 25% 65%);
-    --base08: hsl(193 43% 67%);
-    --base09: hsl(210 44% 63%);
-    --base0A: hsl(213 42% 52%);
-
-    /* Aurora */
-    --base0B: hsl(354 62% 56%);
-    --base0C: hsl(14 61% 63%);
-    --base0D: hsl(40 81% 73%);
-    --base0E: hsl(92 38% 55%);
-    --base0F: hsl(311 40% 63%);
+    /* black */
+    --vesper00: hsl(0, 0%, 6.72%);
+    /* white */
+    --vesper01: hsl(0, 0, 100%);
+    /* yellow */
+    --vesper02: hsl(27 100% 80%);
+    /* grey */
+    --vesper03: hsl(0, 0%, 31%);
+    /* blue */
+    --vesper04: hsl(255, 37%, 77%);
+    /* green */
+    --vesper05: hsl(112, 43%, 88%);
+    /* red */
+    --vesper06: hsl(360, 43%, 74%);
+    /* magenta */
+    --vesper07: hsl(300, 41%, 76%);
+    /* light grey */
+    --vesper08: hsl(0, 3%, 80%);
 
     .CodeMirror {
         /* Background color of main window */
         background-color: transparent;
-        color: var(--base02);
-        --fat-cursor-color: var(--base08);
+        color: var(--vesper01);
+
+        --fat-cursor-color: var(--vesper02);
 
         .CodeMirror-scroll {
             /* Color of otherwise un-styled text */
-            color: var(--base02);
+            color: var(--vesper01);
         }
 
         .CodeMirror-gutters {
@@ -42,30 +38,30 @@
 
         .CodeMirror-linenumber {
             /* Line numbers in the gutter */
-            color: var(--base03);
+            color: var(--vesper03);
             opacity: 0.6;
         }
 
         .CodeMirror-selected {
             /* Highlighed text */
-            background-color: var(--base05);
+            background-color: var(--vesper02);
         }
 
         .CodeMirror-focused .CodeMirror-selected {
             /* Highlighed text */
-            background-color: var(--base04);
+            background-color: var(--vesper02);
         }
 
         .CodeMirror-cursor {
             /* The cursor */
-            border-left: 1px solid var(--base00);
+            border-left: 1px solid var(--vesper02);
         }
 
         .CodeMirror-matchingbracket,
         .CodeMirror-matchingtag {
             /* When you click a tag/bracket and the matching one is highlighted */
-            background: var(--base03) !important;
-            border-bottom: 1px solid var(--base08) !important;
+            background: var(--vesper02) !important;
+            border-bottom: 1px solid var(--vesper01) !important;
         }
 
         .CodeMirror-foldgutter-open:after {
@@ -103,7 +99,7 @@
 
             /* Selected result */
             &.searching-current-match {
-                background-color: var(--base0C);
+                background-color: var(--vesper00);
             }
         }
     }
@@ -112,7 +108,7 @@
 
     .CodeMirror {
         .cm-quote {
-            color: var(--base0F);
+            color: var(--vesper07);
             font-style: italic;
         }
 
@@ -130,7 +126,7 @@
         .cm-string,
         .cm-string-2,
         .cm-hr {
-            color: var(--base09);
+            color: var(--vesper04);
         }
 
         .cm-number,
@@ -141,7 +137,7 @@
 
         .cm-def,
         .cm-property {
-            color: var(--base0C);
+            color: var(--vesper02);
         }
 
         .cm-variable {
@@ -151,7 +147,7 @@
         .cm-operator,
         .cm-meta,
         .cm-bracket {
-            color: var(--base0E);
+            color: var(--vesper07);
         }
 
         .cm-comment {
@@ -169,11 +165,11 @@
         }
 
         .cm-header {
-            color: var(--base0A);
+            color: var(--vesper08);
         }
 
         .cm-link {
-            color: var(--base0E);
+            color: var(--vesper05);
             text-underline-position: under;
         }
 
@@ -184,7 +180,7 @@
         .cm-qualifier,
         .cm-builtin,
         .cm-tag {
-            color: var(--base08);
+            color: var(--vesper02);
         }
 
         .cm-whitespace::before {
@@ -199,17 +195,17 @@
         }
 
         .cm-strong {
-            color: var(--base0B);
+            color: var(--vesper06);
         }
 
         .cm-em {
-            color: var(--base0C);
+            color: var(--vesper05);
         }
 
         /* carriage return */
         .CodeMirror-code>div>pre>span::after,
         .CodeMirror-line>span::after {
-            color: var(--base00);
+            color: var(--vesper06);
             opacity: 0.4;
         }
 
