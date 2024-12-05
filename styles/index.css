@@ -4,7 +4,7 @@
     /* white */
     --vesper01: hsl(0, 0, 100%);
     /* yellow */
-    --vesper02: hsl(27 100% 80%);
+    --vesper02: hsl(27, 100%, 80%);
     /* grey */
     --vesper03: hsl(0, 0%, 31%);
     /* blue */
@@ -33,7 +33,7 @@
         .CodeMirror-gutters {
             /* Gutter to the left */
             background-color: transparent;
-            border-right: 1px solid hsl(0deg 100% 0% / 10%);
+            border-right: 1px solid hsl(0, 0%, 31%);
         }
 
         .CodeMirror-linenumber {
@@ -66,12 +66,12 @@
 
         .CodeMirror-foldgutter-open:after {
             /* Those little arrows in the gutter */
-            color: var(--base03);
+            color: var(--vesper03);
         }
 
         .CodeMirror-foldgutter-folded:after {
             /* The arrows after you collapse code */
-            color: var(--base03);
+            color: var(--vesper03);
         }
 
         .CodeMirror.over-gutter,
@@ -94,12 +94,13 @@
         }
 
         .CodeMirror-searching {
-            /* Ctrl + F results */
-            background-color: var(--base0D);
+
+            /* Ctrl + F results *2
+            background-color: var(--vesper04);
 
             /* Selected result */
             &.searching-current-match {
-                background-color: var(--vesper00);
+                background-color: var(--vesper02);
             }
         }
     }
@@ -114,12 +115,12 @@
 
         .cm-atom,
         .cm-formatting-list.cm-variable-3 {
-            color: var(--base0C);
+            color: var(--vesper02);
         }
 
         .cm-keyword,
         .cm-formatting-list.cm-variable-2 {
-            color: var(--base0A);
+            color: var(--vesper02);
         }
 
         .cm-url,
