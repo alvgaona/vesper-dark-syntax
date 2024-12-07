@@ -2,6 +2,7 @@
     "version": "0.0.0",
     "name": "vesper-dark-syntax",
     "description": "Vesper Dark syntax theme for Inkdrop Markdown Editor",
+    "repository": "https://github.com/alvgaona/vesper-dark-syntax.git",
     "theme": "syntax",
     "scripts": {
         "build": "lessc styles/less/default.less ./styles/index.css"
