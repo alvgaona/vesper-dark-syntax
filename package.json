@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
-    "name": "vesper-syntax",
-    "description": "Vesper syntax theme",
+    "name": "vesper-dark-syntax",
+    "description": "Vesper Dark syntax theme for Inkdrop Markdown Editor",
     "theme": "syntax",
     "scripts": {
         "build": "lessc styles/less/default.less ./styles/index.css"

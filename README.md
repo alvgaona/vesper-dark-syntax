@@ -1,1 +1,3 @@
-# Vesper syntax theme for Inkdrop Markdown Editor
+# vesper-dark-syntax
+
+Vesper Dark syntax theme for Inkdrop Markdown Editor
