@@ -1,29 +1,31 @@
 .editor {
     /* black */
-    --vesper00: hsl(0, 0%, 6.72%);
+    --vesper00: hsl(0 0% 6.72%);
     /* white */
-    --vesper01: hsl(0, 0, 100%);
+    --vesper01: hsl(0 0 100%);
     /* yellow */
-    --vesper02: hsl(27, 100%, 80%);
+    --vesper02: 27 100% 80%;
     /* grey */
-    --vesper03: hsl(0, 0%, 31%);
+    --vesper03: hsl(0 0% 31%);
     /* blue */
-    --vesper04: hsl(255, 37%, 77%);
+    --vesper04: hsl(255 37% 77%);
     /* green */
-    --vesper05: hsl(112, 43%, 88%);
+    --vesper05: hsl(112 43% 88%);
     /* red */
-    --vesper06: hsl(360, 43%, 74%);
+    --vesper06: hsl(360 43% 74%);
     /* magenta */
-    --vesper07: hsl(300, 41%, 76%);
+    --vesper07: hsl(300 41% 76%);
     /* light grey */
-    --vesper08: hsl(0, 3%, 80%);
+    --vesper08: hsl(0 3% 80%);
+
+    --cyan: hsl(180 90% 60%);
 
     .CodeMirror {
         /* Background color of main window */
         background-color: transparent;
         color: var(--vesper01);
 
-        --fat-cursor-color: var(--vesper02);
+        --fat-cursor-color: hsl(var(--vesper02));
 
         .CodeMirror-scroll {
             /* Color of otherwise un-styled text */
@@ -44,23 +46,23 @@
 
         .CodeMirror-selected {
             /* Highlighed text */
-            background-color: var(--vesper02);
+            background-color: hsl(var(--vesper02) / 70%);
         }
 
         .CodeMirror-focused .CodeMirror-selected {
             /* Highlighed text */
-            background-color: var(--vesper02);
+            background-color: hsl(var(--vesper02));
         }
 
         .CodeMirror-cursor {
             /* The cursor */
-            border-left: 1px solid var(--vesper02);
+            border-left: 1px solid hsl(var(--vesper02));
         }
 
         .CodeMirror-matchingbracket,
         .CodeMirror-matchingtag {
             /* When you click a tag/bracket and the matching one is highlighted */
-            background: var(--vesper02) !important;
+            background: hsl(var(--vesper02)) !important;
             border-bottom: 1px solid var(--vesper01) !important;
         }
 
@@ -74,21 +76,6 @@
             color: var(--vesper03);
         }
 
-        .CodeMirror.over-gutter,
-        .CodeMirror-activeline {
-            .CodeMirror-foldgutter-open:after {
-                /* Arrows when hovering on the gutter */
-                color: var(--base03);
-            }
-        }
-
-        .CodeMirror-foldmarker {
-            /* The [...] marking collapsed code */
-            border-color: var(--base03);
-            background-color: var(--base03);
-            color: var(--base02);
-        }
-
         .CodeMirror .CodeMirror-linewidget img.inline-widget {
             background: rgba(0, 0, 0, 0.05);
         }
@@ -99,12 +86,12 @@
 
         .CodeMirror-searching {
 
-            /* Ctrl + F results *2
+            /* Ctrl + F results */
             background-color: var(--vesper04);
 
             /* Selected result */
             &.searching-current-match {
-                background-color: var(--vesper02);
+                background-color: hsl(var(--vesper02));
             }
         }
     }
@@ -119,50 +106,50 @@
 
         .cm-atom,
         .cm-formatting-list.cm-variable-3 {
-            color: var(--vesper02);
+            color: hsl(var(--vesper02));
         }
 
         .cm-keyword,
         .cm-formatting-list.cm-variable-2 {
-            color: var(--vesper02);
+            color: hsl(var(--vesper02));
         }
 
         .cm-url,
         .cm-string,
         .cm-string-2,
         .cm-hr {
-            color: var(--vesper04);
+            color: var(--cyan);
         }
 
         .cm-number,
         .cm-attribute,
         .cm-plus {
-            color: var(--base0A);
+            color: var(--vesper01);
         }
 
         .cm-def,
         .cm-property {
-            color: var(--vesper02);
+            color: hsl(var(--vesper02));
         }
 
         .cm-variable {
-            color: var(--base0A);
+            color: var(--vesper01);
         }
 
         .cm-operator,
         .cm-meta,
         .cm-bracket {
-            color: var(--vesper07);
+            color: var(--vesper01);
         }
 
         .cm-comment {
-            color: var(--base03);
+            color: var(--vesper08);
             font-style: italic;
         }
 
         .cm-error,
         .cm-minus {
-            color: var(--base0B);
+            color: var(--vesper01);
         }
 
         .cm-formatting-header {
@@ -174,22 +161,22 @@
         }
 
         .cm-link {
-            color: var(--vesper05);
+            color: var(--cyan);
             text-underline-position: under;
         }
 
         .cm-rangeinfo {
-            color: var(--base0C);
+            color: var(--vesper01);
         }
 
         .cm-qualifier,
         .cm-builtin,
         .cm-tag {
-            color: var(--vesper02);
+            color: hsl(var(--vesper02));
         }
 
         .cm-whitespace::before {
-            color: var(--base04);
+            color: var(--vesper01);
             opacity: 0.4;
         }
 
@@ -216,7 +203,7 @@
 
         .cm-inline-code {
             background: rgba(0, 0, 0, 0.02);
-            color: var(--base03);
+            color: var(--vesper06);
         }
 
         .gfm-codeblock-bg.CodeMirror-linebackground {
@@ -225,12 +212,12 @@
 
         .cm-table-sep,
         .table-row.table-row-1 {
-            color: var(--base0E);
+            color: hsl(var(--vesper02));
         }
 
         .cm-quote.cm-link-barelink {
             font-style: normal;
-            color: var(--base0B);
+            color: var(--cyan);
         }
     }
 
@@ -238,7 +225,7 @@
     .CodeMirror-activeline-background,
     .CodeMirror-activeline-gutter {
         background-color: color-mix(in srgb,
-                var(--base06),
+                hsl(var(--vesper02)),
                 transparent 70%) !important;
     }
 }
